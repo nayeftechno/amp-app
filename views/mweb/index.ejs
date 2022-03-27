@@ -1,9 +1,10 @@
 <!doctype html>
 <html amp lang="en">
-    <!--amp attribute or ⚡ (zap or high voltage emoji) , turns normal page to AMP page-->
-    <!--so amp cache servers treats our site as AMP app-->
-    <!--also help use in validation , AMP validator extension-->
-  <head>
+<!--amp attribute or ⚡ (zap or high voltage emoji) , turns normal page to AMP page-->
+<!--so amp cache servers treats our site as AMP app-->
+<!--also help use in validation , AMP validator extension-->
+
+<head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <!--script to includes and loads AMP js library , information about AMP elements , built-in AMP components-->
@@ -11,6 +12,7 @@
     <!--twitter suport-->
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <!--youtibe subbort-->
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <title>::index::</title>
     <link rel="canonical" href="http://localhost:3000/mweb/">
     <!--canonical attribue prevent Google from indexing duplicate pages that are not supported to be pages-->
@@ -18,86 +20,179 @@
     <!--  /blog?page=1 , /blog?page=2 , /blog?page=3 -->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <!--specifies responsive viewport-->
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
     <!--CSS boilerplate to initially hide the content until AMP JS is loaded , dont edit or change it-->
     <style amp-custom>
-        .header{
+        .header , .center{
             text-align: center;
+            letter-spacing: 3px;
         }
+        
     </style>
-    <!--for custom style-->  
+    <!--for custom style-->
 </head>
-  <body>
-      <header>
-          <div class="header">
-              <h1>Harly Motorcycle</h1>
-          </div>
-      </header>
-      <main style="max-width: 600px;">
-            
-           <amp-img 
+
+<body>
+    <header>
+        <div class="header">
+            <h3>Image</h3>
+        </div>
+    </header>
+    <main style="max-width: 600px;">
+        <amp-img
             src="https://image.winudf.com/v2/image/Y29tLkJlc3RIYXJseU1vdG9yY3ljbGVNb2RpZmljYXRpb24uYmFzaGFzaGFfc2NyZWVuXzZfOW5yNzhkdnM/screen-6.jpg?fakeurl=1&type=.jpg"
-            width="600"
-            height="400"
-            layout="intrinsic"
-            alt="Best Harly Motorcycle"
-            ></amp-img>
-           
-            <amp-twitter
-            width="375"
-            height="472"
-            layout="responsive"
-            data-tweetid="885634330868850689">
-            </amp-twitter>
+            width="600" height="400" layout="intrinsic" alt="Best Harly Motorcycle"></amp-img>
 
-            <amp-youtube
-            data-videoid="mGENRKrdoGY"
-            layout="responsive"
-            width="480"
-            height="270"
-            ></amp-youtube>
+            <br />
+        <h3 class="center">Iframe</h3>
+        <amp-iframe width="200" height="200" sandbox="allow-scripts" layout="responsive" frameborder="0"
+            src="https://www.electronjs.org/docs/latest">
+            <amp-img layout="fill"
+                width="200"
+                height="200"
+                layout="fixed"
+                src="https://cdn.dribbble.com/users/267/screenshots/1927432/loading.gif"
+                placeholder></amp-img>
+        </amp-iframe>
+        <br />
 
-            <p style="font-size: 20px;">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+        <h3 class="center">Twitt</h3>
+        <amp-twitter width="375" height="472" layout="responsive" data-tweetid="885634330868850689">
+        </amp-twitter>
 
-            <amp-img 
+        <h1 class="center">Youtube Video</h1>
+        <amp-youtube data-videoid="mGENRKrdoGY" layout="responsive" width="480" height="270"></amp-youtube>
+
+        <h3 class="center">Some Content</h3>
+        <p style="font-size: 20px;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+     
+        <h3 class="center">List Of Images</h3>
+        <amp-img
             src="https://scontent.famm3-3.fna.fbcdn.net/v/t31.18172-8/19388403_211621399360308_5758478073203495623_o.jpg?_nc_cat=105&ccb=1-5&_nc_sid=9267fe&_nc_ohc=WQpK2P0On5gAX9EVXUG&_nc_ht=scontent.famm3-3.fna&oh=00_AT9t-GU4C6e0FhF2LfGWH-5E3VOWsmQCjk7KShGSEYertQ&oe=6267A8C0"
-            width="600"
-            height="400"
-            layout="intrinsic"
-            alt="Best Harly Motorcycle"
-            ></amp-img>
-            
-            
-            <amp-img 
-            src="https://scontent.famm3-1.fna.fbcdn.net/v/t1.6435-9/78769469_730802234108886_998424684791857152_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=9267fe&_nc_ohc=KtZ0VpwstZ4AX9eykHc&_nc_ht=scontent.famm3-1.fna&oh=00_AT91Z-C2uLw0OMTI6wTRoaerOCAR0l7vWm98tvVwC_CeIQ&oe=6264094B"
-            width="600"
-            height="400"
-            layout="intrinsic"
-            alt="Best Harly Motorcycle"
-            ></amp-img>\<amp-img 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Fy9XkNlH_pFYOjrQmW8UAIjvnks9YbaO2XNerDWVOVScc453gcieco5Fz10MB-zU6gc&usqp=CAU"
-            width="600"
-            height="400"
-            layout="intrinsic"
-            alt="Best Harly Motorcycle"
-            ></amp-img>
-            <amp-img 
-            src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFybGV5JTIwZGF2aWRzb258ZW58MHx8MHx8&w=1000&q=80"
-            width="600"
-            height="400"
-            layout="intrinsic"
-            alt="Best Harly Motorcycle"
-            ></amp-img>
+            width="600" height="400" layout="intrinsic" alt="Best Harly Motorcycle"></amp-img>
 
-      </main>
-      <footer></footer>
+
+        <amp-img
+            src="https://scontent.famm3-1.fna.fbcdn.net/v/t1.6435-9/78769469_730802234108886_998424684791857152_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=9267fe&_nc_ohc=KtZ0VpwstZ4AX9eykHc&_nc_ht=scontent.famm3-1.fna&oh=00_AT91Z-C2uLw0OMTI6wTRoaerOCAR0l7vWm98tvVwC_CeIQ&oe=6264094B"
+            width="600" height="400" layout="intrinsic" alt="Best Harly Motorcycle"></amp-img>\<amp-img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Fy9XkNlH_pFYOjrQmW8UAIjvnks9YbaO2XNerDWVOVScc453gcieco5Fz10MB-zU6gc&usqp=CAU"
+            width="600" height="400" layout="intrinsic" alt="Best Harly Motorcycle"></amp-img>
+
+        <amp-img
+            src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFybGV5JTIwZGF2aWRzb258ZW58MHx8MHx8&w=1000&q=80"
+            width="600" height="400" layout="intrinsic" alt="Best Harly Motorcycle"></amp-img>
+
+    </main>
+    <footer></footer>
 </body>
+
 </html>
