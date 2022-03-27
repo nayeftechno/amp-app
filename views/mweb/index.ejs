@@ -102,6 +102,8 @@
     <header>
         <div class="header">
             <h3>Image</h3>
+            <button on="tap:some-text.toggleVisibility">Toggle Text</button>
+            <p id="some-text" hidden style="letter-spacing: 5px;">Some Text</p>
         </div>
     </header>
     <main style="max-width: 600px;">
@@ -113,10 +115,10 @@
         <h3 class="center">Iframe</h3>
         <amp-iframe width="200" height="150" sandbox="allow-scripts" layout="responsive" frameborder="0"
             src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed">
-            <amp-img layout="fill"
+            <amp-img
                 width="200"
                 height="1"
-                layout="fixed"
+                layout="fill"
                 src="https://cdn.dribbble.com/users/2256783/screenshots/10769871/media/7ed3a8055730a512ebaf59428cb12227.gif"
                 placeholder></amp-img>
         </amp-iframe>
